@@ -169,7 +169,7 @@ window.addEventListener('load' , ()=> {
         e.preventDefault();
         clientX = e.touches[0].clientX;
         clientY = e.touches[0].clientY;
-        Draw(clientX, clientY)
+        Draw()
         }
     }, false);
 
