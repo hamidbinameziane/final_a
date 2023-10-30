@@ -45,10 +45,12 @@ window.addEventListener('load' , ()=> {
     function Draw(e)
     {
         if(!paint)return;
-        ctx.lineTo(e.offsetX, e.offsetY)
-        ctx.lineJoin = 'round';
-        ctx.lineCap = 'round';
-        ctx.stroke()
+            e.offsetX = e.touches[0].pageX - e.touches[0].target.offsetLeft;     
+            e.offsetY = e.touches[0].pageY - e.touches[0].target.offsetTop;
+            ctx.lineTo(e.offsetX, e.offsetY)
+            ctx.lineJoin = 'round';
+            ctx.lineCap = 'round';
+            ctx.stroke()
         if (h == 50)
         {
             his_P()
