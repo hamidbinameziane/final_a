@@ -3,7 +3,7 @@ from werkzeug.utils import secure_filename
 import os
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'hamidbinameziane'
-app.config['UPLOAD_FOLDER'] = 'static/images'
+app.config['UPLOAD_FOLDER'] = '.static/images'
 
 @app.route("/", methods=["GET", "POST"])
 def index():
