@@ -23,6 +23,19 @@ window.addEventListener('load' , ()=> {
     canvas.height = window.innerWidth * 1.5;
     ctx.lineWidth = sze.value;
     let paint = false
+
+    function drawimg() {
+
+        var img = new Image()
+        var f = image.files[0]
+        var url = window.URL || window.webkitURL
+        var src = url.createObjectURL(f);
+      
+        img.src = src;
+        img.onload = function(){
+          ctx.drawImage(img,0,0);
+        }
+      }
   
     function startP ()
     {
@@ -143,18 +156,7 @@ window.addEventListener('load' , ()=> {
         und.style.fontWeight = 900;
       });
 
-
-    var img = new Image()
-    var f = image.files[0]
-    var url = window.URL || window.webkitURL
-    var src = url.createObjectURL(f);
-    
-    img.src = src;
-    img.onload = function(){
-        ctx.drawImage(img,0,0);
-        url.revokeObjectURL(src);
-    }
-    
+      image.addEventListener('change', drawimg)
 
 
 })
