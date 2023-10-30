@@ -7,6 +7,10 @@ app.config['UPLOAD_FOLDER'] = '.static/images'
 
 @app.route("/", methods=["GET", "POST"])
 def index():
+    return render_template("index.html")
+
+@app.route("/upload", methods=["POST"])
+def upload_file():
     if 'file' in request.files:
         file = request.files['file']
         filename = secure_filename(file.filename)
@@ -16,3 +20,7 @@ def index():
         file.save(os.path.join(os.path.join(app.config['UPLOAD_FOLDER'], filename)))
 
     return render_template("index.html")
+
+@app.route("/canv", methods=["GET", "POST"])
+def canv():
+    return render_template("canv.html")
