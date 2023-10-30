@@ -47,7 +47,6 @@ window.addEventListener('load' , ()=> {
     {
         if(!paint)return;
         ctx.lineTo(e.offsetX, e.offsetY)
-        ctx.lineTo(touches.offsetX, touches.offsetY)
         ctx.lineJoin = 'round';
         ctx.lineCap = 'round';
         ctx.stroke()
