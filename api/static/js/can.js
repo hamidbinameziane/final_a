@@ -12,8 +12,6 @@ window.addEventListener('load' , ()=> {
     var step = -1;
     var can_p = new Image();
     var h = 0;
-    var background = new Image();
-    background.src = "/tmp/canv.jpg";
 
     
 
@@ -24,10 +22,6 @@ window.addEventListener('load' , ()=> {
     canvas.height = window.innerWidth * 1.5;
     ctx.lineWidth = sze.value;
     let paint = false
-    
-    background.onload = function(){
-        ctx.drawImage(background, 0, 0);   
-    }
   
     function startP ()
     {
