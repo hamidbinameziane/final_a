@@ -95,3 +95,10 @@ input[type=range] {
 input[type=file] {
     visibility: hidden;
   }
+nav {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+}

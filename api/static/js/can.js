@@ -156,7 +156,7 @@ window.addEventListener('load' , ()=> {
         und.style.fontWeight = 900;
       });
 
-      image.addEventListener('change', drawimg)
+    image.addEventListener('change', drawimg)
 
 
 })
