@@ -9,7 +9,3 @@ app.config['SECRET_KEY'] = 'hamidbinameziane'
 def index():
     return render_template("index.html")
 
-@app.route("/upload", methods=["POST"])
-def upload_file():     
-
-    return render_template("index.html")
