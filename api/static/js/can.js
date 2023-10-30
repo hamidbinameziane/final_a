@@ -148,5 +148,30 @@ window.addEventListener('load' , ()=> {
         und.style.fontWeight = 900;
       });
 
+      //canvas on mobile
+    document.body.addEventListener("touchstart", function (e) {
+        if (e.target == canvas) {
+        e.preventDefault();
+        clientX = e.touches[0].clientX;
+        clientY = e.touches[0].clientY; 
+        paint = true;
+        Draw(clientX, clientY)
+        }
+    }, false);
+    document.body.addEventListener("touchend", function (e) {
+        if (e.target == canvas) {
+        e.preventDefault();
+        paint=false;
+        }
+    }, false);
+    document.body.addEventListener("touchmove", function (e) {
+        if (e.target == canvas) {
+        e.preventDefault();
+        clientX = e.touches[0].clientX;
+        clientY = e.touches[0].clientY;
+        Draw(clientX, clientY)
+        }
+    }, false);
+
 })
 
