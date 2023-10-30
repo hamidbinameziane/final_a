@@ -1,7 +1,6 @@
 window.addEventListener('load' , ()=> {
     const canvas = document.getElementById('canvas')
     const ctx = canvas.getContext('2d')
-    const touches = evt.changedTouches;
     var clr = document.getElementById('myc')
     var pclr = document.getElementById("pclr")
     var sze = document.getElementById('myr')
