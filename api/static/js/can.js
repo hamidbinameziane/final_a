@@ -7,7 +7,8 @@ window.addEventListener('load' , ()=> {
     var num = document.getElementById('myn')
     var clear = document.getElementById('allC')
     var und = document.getElementById('undo')
-    var load = document.getElementById('load')
+    var image = document.getElementById('file')
+
     var his_array = new Array()
     var step = -1;
     var can_p = new Image();
@@ -141,6 +142,20 @@ window.addEventListener('load' , ()=> {
       und.addEventListener('mouseout', () => {
         und.style.fontWeight = 900;
       });
+      function drawimg() {
+
+        var img = new Image()
+        var f = image.files[0]
+        var url = window.URL || window.webkitURL
+        var src = url.createObjectURL(f);
+      
+        img.src = src;
+        img.onload = function(){
+          ctx.drawImage(img,0,0);
+          url.revokeObjectURL(src);
+        }
+      }
+      image.addEventListener('change', drawimg)
 
 
 })

@@ -10,9 +10,6 @@ def index():
     return render_template("index.html")
 
 @app.route("/upload", methods=["POST"])
-def upload_file():
-    if 'file' in request.files:
-        file = request.files['file']
-        
+def upload_file():     
 
-    return render_template("index.html",file=file)
+    return render_template("index.html")
