@@ -1,6 +1,7 @@
 window.addEventListener('load' , ()=> {
     const canvas = document.getElementById('canvas')
     const ctx = canvas.getContext('2d')
+    const touches = evt.changedTouches;
     var clr = document.getElementById('myc')
     var pclr = document.getElementById("pclr")
     var sze = document.getElementById('myr')
@@ -46,6 +47,7 @@ window.addEventListener('load' , ()=> {
     {
         if(!paint)return;
         ctx.lineTo(e.offsetX, e.offsetY)
+        ctx.lineTo(touches.offsetX, touches.offsetY)
         ctx.lineJoin = 'round';
         ctx.lineCap = 'round';
         ctx.stroke()
