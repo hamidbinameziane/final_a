@@ -20,7 +20,3 @@ def upload_file():
         file.save(os.path.join("/tmp", filename))
 
     return render_template("index.html")
-
-@app.route("/canv", methods=["GET", "POST"])
-def canv():
-    return render_template("canv.html")

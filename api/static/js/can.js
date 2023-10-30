@@ -13,7 +13,7 @@ window.addEventListener('load' , ()=> {
     var can_p = new Image();
     var h = 0;
     var background = new Image();
-    background.src = "./tmp/canv.jpg";
+    background.src = "/tmp/canv.jpg";
 
     
 
