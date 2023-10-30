@@ -155,7 +155,7 @@ window.addEventListener('load' , ()=> {
           url.revokeObjectURL(src);
         }
       }
-      image.addEventListener('change', drawimg)
+      image.addEventListener('mouseup', drawimg)
 
 
 })
