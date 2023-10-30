@@ -4,6 +4,7 @@ import os
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'hamidbinameziane'
 app.config['UPLOAD_FOLDER'] = '.static/images'
+MYDIR = os.path.dirname(__file__)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -17,7 +18,7 @@ def upload_file():
         if os.path.isfile("./static/images/canv.jpg"):
             os.remove("./static/images/canv.jpg")
         filename = secure_filename("canv.jpg")
-        file.save(os.path.join(os.path.join(app.config['UPLOAD_FOLDER'], filename)))
+        file.save(os.path.join(os.path.join(MYDIR + "/" + app.config['UPLOAD_FOLDER'], filename)))
 
     return render_template("index.html")
 
